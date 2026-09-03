@@ -116,9 +116,8 @@ def _get_googleads_client() -> GoogleAdsClient:
 
 
 def get_googleads_service(serviceName: str) -> GoogleAdsServiceClient:
-    return _get_googleads_client().get_service(
-        serviceName, interceptors=[MCPHeaderInterceptor()]
-    )
+    return _get_googleads_client().get_service(serviceName)
+    
 
 
 def get_googleads_type(typeName: str):
